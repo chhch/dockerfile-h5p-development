@@ -19,4 +19,6 @@ For reference see [Set up H5P for Drupal 7](https://h5p.org/documentation/setup/
 
 ## Usage
 
-`docker run --name h5p-drupal --mount type=bind,source=/path/to/folder/development/,target=/var/www/html/sites/default/files/h5p/development/ \-p 8080:80 -volume drupal-h5p-development`
+`docker run --name h5p-drupal --mount type=bind,source=/path/to/folder/development/,target=/var/www/html/sites/default/files/h5p/development/ \-p 8080:80 chhch/drupal-h5p-development`
+
+Open <http://localhost:8080> in your browser and login with username `admin` and password `admin`.
