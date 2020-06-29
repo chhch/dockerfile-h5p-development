@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /var/www/html
 
-# To work with drush-launcher on non-composer drupal 7 projects
+# To work with drush-launcher on initial non-composer drupal 7 projects
 #  we have to create a composer.json file and install composer
 #  https://github.com/drush-ops/drush-launcher/issues/33
 
@@ -44,3 +44,5 @@ RUN drush site:install --db-url=sqlite://sites/default/files/.ht.sqlite --accoun
     drush variable-set --exact h5p_dev_mode 1 && \
     drush variable-set --exact h5p_library_development 1 && \
     chown -R www-data:www-data .
+
+EXPOSE 80
