@@ -13,10 +13,18 @@ Open <http://localhost:8080> in your browser and login with username `admin` and
 ```yaml
 version: "3.8"
 
-services: h5p-drupal: image: chhch/drupal-h5p-development ports: - "8080:80" volumes: - "./development:/var/www/html/sites/default/files/h5p/development"
+services:
+  h5p-drupal:
+    image: chhch/drupal-h5p-development
+    ports: 
+      - "8080:80"
+    volumes: 
+      - "./development:/var/www/html/sites/default/files/h5p/development"
 ```
 
 Start the container with `docker-compose up`
+git s
+Open <http://localhost:8080> in your browser and login with username `admin` and password `admin`.
 
 ## Dockerfile Configuration
 
