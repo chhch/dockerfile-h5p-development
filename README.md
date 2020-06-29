@@ -22,8 +22,8 @@ services:
       - "./development:/var/www/html/sites/default/files/h5p/development"
 ```
 
-Start the container with `docker-compose up`
-git s
+Start the container with `docker-compose up`.
+
 Open <http://localhost:8080> in your browser and login with username `admin` and password `admin`.
 
 ## Dockerfile Configuration
