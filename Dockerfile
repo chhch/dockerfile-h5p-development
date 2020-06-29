@@ -1,9 +1,11 @@
-FROM drupal:7
+FROM drupal:7.72
 
 ENV DRUSH_LAUNCHER_VERSION 0.6.0
-ENV COMPOSER_VERSION 1.8.5
+ENV COMPOSER_VERSION 1.10.8
 ENV ADMIN_NAME admin
 ENV ADMIN_PASSWORD admin
+ENV APACHE_RUN_USER=www-data
+ENV APACHE_RUN_GROUP=www-data
 
 RUN apt-get update && apt-get install -y \
     sqlite3 \
