@@ -23,8 +23,7 @@ RUN curl -o composer https://getcomposer.org/download/${COMPOSER_VERSION}/compos
     chmod +x composer && \
     ./composer install
 
-RUN cp sites/default/default.settings.php sites/default/settings.php && \
-    chown www-data sites/default/settings.php
+RUN cp sites/default/default.settings.php sites/default/settings.php
 
 # Install drush-launcher
 
@@ -44,4 +43,4 @@ RUN drush site:install --db-url=sqlite://sites/default/files/.ht.sqlite --accoun
     drush pm-enable h5p h5peditor --yes && \
     drush variable-set --exact h5p_dev_mode 1 && \
     drush variable-set --exact h5p_library_development 1 && \
-    chmod -R a+w sites modules themes
+    chown -R www-data:www-data .
